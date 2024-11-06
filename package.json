@@ -6,14 +6,21 @@
   "scripts": {
     "dev": "tsx watch --env-file .env src/http/server.ts",
     "seed": "tsx --env-file .env src/db/seed.ts",
-    "format": "biome format src --write"
+    "format": "biome format src --write",
+    "pretest": "npm run db:migrate:test",
+    "pretest:watch": "npm run db:migrate:test",
+    "db:migrate:test": "dotenv -e .env.test -- drizzle-kit migrate",
+    "test": "dotenv -e .env.test -- vitest run",
+    "test:watch": "dotenv -e .env.test -- vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
+    "@faker-js/faker": "^9.2.0",
     "@types/node": "^22.5.4",
+    "dotenv-cli": "^7.4.2",
     "drizzle-kit": "^0.27.1",
     "tsx": "^4.19.0",
     "typescript": "^5.6.2"
@@ -30,6 +37,7 @@
     "fastify-type-provider-zod": "^4.0.2",
     "jose": "^5.9.6",
     "postgres": "^3.4.5",
+    "vitest": "^2.1.4",
     "zod": "^3.23.8"
   }
 }
