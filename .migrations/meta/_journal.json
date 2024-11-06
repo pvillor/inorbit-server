@@ -15,6 +15,20 @@
       "when": 1725928953712,
       "tag": "0001_lovely_logan",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1730899698265,
+      "tag": "0002_bored_demogoblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1730899925164,
+      "tag": "0003_great_sway",
+      "breakpoints": true
     }
   ]
 }
