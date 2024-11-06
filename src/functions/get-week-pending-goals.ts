@@ -48,7 +48,7 @@ export async function getWeekPendingGoals({
     .select({
       id: goalsCreatedUpToWeek.id,
       title: goalsCreatedUpToWeek.title,
-      desiredWeeklyFequency: goalsCreatedUpToWeek.desiredWeeklyFrequency,
+      desiredWeeklyFrequency: goalsCreatedUpToWeek.desiredWeeklyFrequency,
       completionCount: sql /*sql*/`
         COALESCE(${goalCompletionCounts.completionCount}, 0)
       `.mapWith(Number),
